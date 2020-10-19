@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="LMG_STS_APIs" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="P_Environment" elementType="Argument">
+            <stringProp name="Argument.name">P_Environment</stringProp>
+            <stringProp name="Argument.value">apidev.landmarkgroup.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="P_ServerHost" elementType="Argument">
+            <stringProp name="Argument.name">P_ServerHost</stringProp>
+            <stringProp name="Argument.value">192.168.31.23</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="P_ServerPort" elementType="Argument">
+            <stringProp name="Argument.name">P_ServerPort</stringProp>
+            <stringProp name="Argument.value">8442</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="P_X-Ibm-Client-Id" elementType="Argument">
+            <stringProp name="Argument.name">P_X-Ibm-Client-Id</stringProp>
+            <stringProp name="Argument.value">26adb636-34a4-41b2-80fb-e727af79111a</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="AccessToken" elementType="Argument">
+            <stringProp name="Argument.name">AccessToken</stringProp>
+            <stringProp name="Argument.value">eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImFwYlI3eENXSXJ5STV4OTd0ZGkwLXRpY0pwUSJ9.eyJhdWQiOiJodHRwczovL1NhaGxhV2ViQXBpIiwiaXNzIjoiaHR0cDovL1NUUy5MQU5ETUFSS0dST1VQLkNPTS9hZGZzL3NlcnZpY2VzL3RydXN0IiwiaWF0IjoxNjAyNzY5NTk0LCJleHAiOjE2MDI3NzMxOTQsImZhbWlseV9uYW1lIjoiU3VyZXNoIiwiZ2l2ZW5fbmFtZSI6IkFtdXRoYSIsIlNhbUFjY291bnROYW1lIjoiMjEzMTg5IiwiYXBwdHlwZSI6IlB1YmxpYyIsImFwcGlkIjoiNWE3MWIxMDctYTQ1Ni00YTY4LWIyZDItYzFjOGQwOWQ3NzU3IiwiYXV0aG1ldGhvZCI6InVybjpvYXNpczpuYW1lczp0YzpTQU1MOjIuMDphYzpjbGFzc2VzOlBhc3N3b3JkUHJvdGVjdGVkVHJhbnNwb3J0IiwiYXV0aF90aW1lIjoiMjAyMC0xMC0xNVQwNjozODoyOC4yODZaIiwidmVyIjoiMS4wIiwic2NwIjoiZW1haWwgcHJvZmlsZSBvcGVuaWQifQ.FeulUYNC_3CKzc43EW63OdcMjsHmmQTw5YBMLdCX1Ekhnlcuz4htCD9FVRNjr1SXdl55aH3cAOwqHtRWLJGncUybcCquyz6t1TGaJsiRPB1Na0ywxnsfuypIgO6kjZcqckKc0Z77fulLgF1_TgU2eOzBGn9TBDrlmLxgXg61GAMqie-VbC7ceN9KJb9xeBnq_ZZiJFr61OVWQmZMYl6jP8Hj4VMEqBvy0XWC1OegTOzicNdnRPSJKNbpHg2T3ktu0A2ivmKQgLNg5esW8Ga3Q-zqQcfzk8Y588ZNf4vEj0r1tbUd1Kv2mkEorZo0NNaLnuyDuQvH5w1ZWRz1kWRklQ</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">true</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSVDataSetConfig_Data_LookupFromSahlaSell" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="filename">C:/LMK_SahlaApplication_PT_Project/LMG_STS_PT/Data_LookupFromSahlaSell.csv</stringProp>
+        <boolProp name="ignoreFirstLine">true</boolProp>
+        <boolProp name="quotedData">true</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">P_Distribution_Group_Id,P_Item_Id1,P_ItemLine_id</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSVDataSetConfig_Data_Reservation" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="filename">C:/LMK_SahlaApplication_PT_Project/LMG_STS_PT/Data_Reservation.csv</stringProp>
+        <boolProp name="ignoreFirstLine">true</boolProp>
+        <boolProp name="quotedData">true</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">P_Organization_Code,P_Origin_Site,P_Order_Delivery_Type,P_Item_Id2,P_Item_Line_Id,P_Required_Quantity,P_Reserved_Quantity,P_Concept,P_Ship_Node,P_Reservation_Id</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSVDataSetConfig_P_Reservation_Data_OrderCreate" enabled="true">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="filename">C:/LMK_SahlaApplication_PT_Project/LMG_STS_PT/Data_OrderCreate.csv</stringProp>
+        <boolProp name="ignoreFirstLine">true</boolProp>
+        <boolProp name="quotedData">true</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">P_OrderId, P_OrderType,P_EnterpriseCode,P_OrderedQuantity,P_CarrierServiceCode,P_OrderReservedQuantity,P_CancelQuantity</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S01_STS_APIs" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Post_IVCall/LookupFromSahlaSell" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+   &quot;distribution_groups&quot;:[&#xd;
+      {&#xd;
+         &quot;id&quot;:&quot;${P_Distribution_Group_Id}&quot;, &#xd;
+         &quot;concept&quot;:null,&#xd;
+         &quot;items&quot;:[&#xd;
+            {&#xd;
+               &quot;id&quot;:&quot;${P_Item_Id1}&quot;, &#xd;
+               &quot;item_line_id&quot;:&quot;${P_ItemLine_id}&quot;, &#xd;
+               &quot;delivery_method&quot;:&quot;SHP&quot;&#xd;
+            }&#xd;
+         ]&#xd;
+      }&#xd;
+   ]&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${P_Environment}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/landmarkgroup/retail-pt/v2/network-inventory/availability</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-ibm-client-id</stringProp>
+                <stringProp name="Header.value">${P_X-Ibm-Client-Id}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${AccessToken}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1550476772">total_available_quantity</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Post_IVCall/LookupFromSahlaSell Response is not found</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <stringProp name="Assertion.scope">all</stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Post_Reservation" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+   &quot;promise&quot;:{&#xd;
+      &quot;organization_code&quot;:&quot;${P_Organization_Code}&quot;, &#xd;
+      &quot;origin_site&quot;:&quot;${P_Origin_Site}&quot;,			&#xd;
+      &quot;order_delivery_type&quot;:&quot;${P_Order_Delivery_Type}&quot;, &#xd;
+      &quot;promise_lines&quot;:[&#xd;
+         {&#xd;
+            &quot;item_id&quot;:&quot;${P_Item_Id2}&quot;, &#xd;
+            &quot;item_line_id&quot;:&quot;${P_Item_Line_Id}&quot;, &#xd;
+            &quot;required_quantity&quot;:${P_Required_Quantity}, &#xd;
+            &quot;reserved_quantity&quot;:${P_Reserved_Quantity}, &#xd;
+            &quot;concept&quot;:&quot;${P_Concept}&quot;,  		&#xd;
+            &quot;is_click_and_collect&quot;:&quot;Y&quot;,&#xd;
+            &quot;is_concept_delivery&quot;:&quot;N&quot;,&#xd;
+            &quot;ship_node&quot;:&quot;${P_Ship_Node}&quot;, &#xd;
+            &quot;reservation&quot;:{&#xd;
+               &quot;reservation_id&quot;:&quot;${P_Reservation_Id}&quot;, &#xd;
+               &quot;allow_partial_reservation&quot;:&quot;N&quot;,&#xd;
+               &quot;expiration_date&quot;:&quot;${__timeShift(yyyy-MM-dd,,,,)}T14:17:41+03:00&quot;&#xd;
+            }&#xd;
+         }&#xd;
+      ],&#xd;
+      &quot;ship_to_address&quot;:{&#xd;
+         &quot;city&quot;:&quot;Dubai&quot;,&#xd;
+         &quot;country&quot;:&quot;AE&quot;,&#xd;
+         &quot;state&quot;:&quot;DXB&quot;,&#xd;
+         &quot;zip_code&quot;:&quot;04-1-2-312&quot;&#xd;
+      }&#xd;
+   }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${P_Environment}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/landmarkgroup/retail-pt/v2/inventory-reservations/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-ibm-client-id</stringProp>
+                <stringProp name="Header.value">${P_X-Ibm-Client-Id}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${AccessToken}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="RegularExpressionExtractor_C_Reservation_Id" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">C_Reservation_Id</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;reservation_id&quot;:&quot;(.*?)&quot;,&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">C_Reservation_Id is not found</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Post_OrderCreate" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+   &quot;order&quot;:{&#xd;
+      &quot;id&quot;:&quot;${P_OrderId}&quot;,&#xd;
+      &quot;order_type&quot;:&quot;${P_OrderType}&quot;,&#xd;
+      &quot;order_delivery_type&quot;:&quot;${P_Order_Delivery_Type}&quot;,&#xd;
+      &quot;order_date&quot;:&quot;${__timeShift(yyyy-MM-dd,,,,)}T14:23:20+03:00&quot;,&#xd;
+      &quot;enterprise_code&quot;:&quot;${P_EnterpriseCode}&quot;,&#xd;
+      &quot;origin_site&quot;:&quot;${P_Origin_Site}&quot;,&#xd;
+      &quot;entry_type&quot;:&quot;SahlaSell&quot;,&#xd;
+      &quot;bill_to_id&quot;:&quot;21006000000386&quot;,&#xd;
+      &quot;customer_primary_key&quot;:&quot;21006000000386&quot;,&#xd;
+      &quot;customer_email_id&quot;:&quot;f@e.in&quot;,&#xd;
+      &quot;document_type&quot;:&quot;0001&quot;,&#xd;
+      &quot;order_total&quot;:205.0,&#xd;
+      &quot;tax_total&quot;:9.76,&#xd;
+      &quot;discount_total&quot;:0.0,&#xd;
+      &quot;sub_total&quot;:205.0,&#xd;
+      &quot;refund_voucher_amount_total&quot;:0.0,&#xd;
+      &quot;promotion_voucher_amount_total&quot;:0.0,&#xd;
+      &quot;shukran_burned_amount_total&quot;:0.0,&#xd;
+      &quot;order_lines&quot;:[&#xd;
+         {&#xd;
+            &quot;item_line_id&quot;:&quot;${P_Item_Line_Id}&quot;,&#xd;
+            &quot;ordered_quantity&quot;:${P_OrderedQuantity},&#xd;
+            &quot;carrier_service_code&quot;:&quot;${P_CarrierServiceCode}&quot;,&#xd;
+            &quot;ship_node&quot;:&quot;${P_Ship_Node}&quot;,&#xd;
+            &quot;requested_delivery_date&quot;:&quot;${__timeShift(yyyy-MM-dd,,,,)}T14:23:21+03:00&quot;,&#xd;
+            &quot;department_code&quot;:&quot;1&quot;,&#xd;
+            &quot;delivery_method&quot;:&quot;PICK&quot;,&#xd;
+            &quot;gift_flag&quot;:&quot;N&quot;,&#xd;
+            &quot;line_type&quot;:null,&#xd;
+            &quot;collection_point&quot;:&quot;&quot;,&#xd;
+            &quot;fodel_reservation_id&quot;:&quot;&quot;,&#xd;
+            &quot;fulfillment_type&quot;:&quot;CC_1_N&quot;,&#xd;
+            &quot;item&quot;:{&#xd;
+               &quot;id&quot;:&quot;${P_Item_Id2}&quot;,&#xd;
+               &quot;description&quot;:&quot;Babyte(x) Silver (133(x)70(x)10)&quot;,&#xd;
+               &quot;common_item_id&quot;:null,&#xd;
+               &quot;is_concept_delivery&quot;:&quot;N&quot;&#xd;
+            },&#xd;
+            &quot;line_price_info&quot;:{&#xd;
+               &quot;unit_price&quot;:205.0&#xd;
+            },&#xd;
+            &quot;line_taxes&quot;:[&#xd;
+               {&#xd;
+                  &quot;tax&quot;:9.76,&#xd;
+                  &quot;tax_name&quot;:&quot;AESTD&quot;,&#xd;
+                  &quot;tax_percentage&quot;:5.0,&#xd;
+                  &quot;charge_category&quot;:&quot;VAT&quot;,&#xd;
+                  &quot;charge_name&quot;:&quot;VAT&quot;&#xd;
+               }&#xd;
+            ],&#xd;
+            &quot;line_charges&quot;:null,&#xd;
+            &quot;order_line_reservations&quot;:[&#xd;
+               {&#xd;
+                  &quot;reservation_id&quot;:&quot;AE_21006555201420200883_00&quot;,&#xd;
+                  &quot;reserved_quantity&quot;:${P_OrderReservedQuantity},&#xd;
+                  &quot;item_id&quot;:&quot;${P_Item_Id2}&quot;,&#xd;
+                  &quot;ship_node&quot;:&quot;${P_Ship_Node}&quot;&#xd;
+               }&#xd;
+            ]&#xd;
+         }&#xd;
+      ],&#xd;
+      &quot;charges&quot;:null,&#xd;
+      &quot;taxes&quot;:[&#xd;
+         {&#xd;
+            &quot;charge_category&quot;:&quot;VAT&quot;,&#xd;
+            &quot;charge_name&quot;:&quot;VAT&quot;,&#xd;
+            &quot;tax_name&quot;:&quot;AESTD&quot;,&#xd;
+            &quot;taxable_flag&quot;:&quot;N&quot;,&#xd;
+            &quot;tax&quot;:9.76&#xd;
+         }&#xd;
+      ],&#xd;
+      &quot;additional_addresses&quot;:null,&#xd;
+      &quot;person_info_bill_to&quot;:{&#xd;
+         &quot;first_name&quot;:&quot;Lucky&quot;,&#xd;
+         &quot;last_name&quot;:&quot;Nkolonji&quot;,&#xd;
+         &quot;email_id&quot;:&quot;f@e.in&quot;,&#xd;
+         &quot;state&quot;:&quot;DXB&quot;,&#xd;
+         &quot;zip_code&quot;:&quot;04-1-2-312&quot;,&#xd;
+         &quot;city&quot;:&quot;Abu Dhabi&quot;,&#xd;
+         &quot;country&quot;:&quot;AE&quot;,&#xd;
+         &quot;day_phone&quot;:&quot;9090909098&quot;,&#xd;
+         &quot;address_line1&quot;:&quot;Dfg jh&quot;,&#xd;
+         &quot;address_line2&quot;:&quot;Dfgertyfghwer&quot;,&#xd;
+         &quot;address_line3&quot;:&quot;Burjuman&quot;,&#xd;
+         &quot;address_line5&quot;:null,&#xd;
+         &quot;address_line6&quot;:null&#xd;
+      },&#xd;
+      &quot;person_info_ship_to&quot;:{&#xd;
+         &quot;first_name&quot;:&quot;Lucky&quot;,&#xd;
+         &quot;last_name&quot;:&quot;Nkolonji&quot;,&#xd;
+         &quot;email_id&quot;:&quot;f@e.in&quot;,&#xd;
+         &quot;state&quot;:&quot;DXB&quot;,&#xd;
+         &quot;zip_code&quot;:&quot;04-1-2-312&quot;,&#xd;
+         &quot;city&quot;:&quot;Abu Dhabi&quot;,&#xd;
+         &quot;country&quot;:&quot;AE&quot;,&#xd;
+         &quot;day_phone&quot;:&quot;9090909098&quot;,&#xd;
+         &quot;address_line1&quot;:&quot;Dfg jh&quot;,&#xd;
+         &quot;address_line2&quot;:&quot;Dfgertyfghwer&quot;,&#xd;
+         &quot;address_line3&quot;:&quot;Burjuman&quot;,&#xd;
+         &quot;address_line5&quot;:null,&#xd;
+         &quot;address_line6&quot;:null&#xd;
+      },&#xd;
+      &quot;payment_methods&quot;:[&#xd;
+         {&#xd;
+            &quot;payment_type&quot;:&quot;SS_TENDER&quot;,&#xd;
+            &quot;payment_reference1&quot;:&quot;8500&quot;,&#xd;
+            &quot;payment_reference2&quot;:null,&#xd;
+            &quot;payment_reference3&quot;:null,&#xd;
+            &quot;credit_card_type&quot;:null,&#xd;
+            &quot;credit_card_no&quot;:null,&#xd;
+            &quot;credit_card_name&quot;:null,&#xd;
+            &quot;credit_card_expiry_date&quot;:null,&#xd;
+            &quot;payment_details&quot;:{&#xd;
+               &quot;request_amount&quot;:205.0,&#xd;
+               &quot;processed_amount&quot;:205.0,&#xd;
+               &quot;collection_date&quot;:&quot;${__timeShift(yyyy-MM-dd,,,,)}T14:23:21+03:00&quot;,&#xd;
+               &quot;charge_type&quot;:&quot;CHARGE&quot;,&#xd;
+               &quot;authorization_id&quot;:null,&#xd;
+               &quot;authorization_expiration_date&quot;:&quot;${__timeShift(yyyy-MM-dd,,,,)}T14:23:21+03:00&quot;&#xd;
+            }&#xd;
+         }&#xd;
+      ]&#xd;
+   }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${P_Environment}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/landmarkgroup/retail-pt/v2/customer-orders/${P_OrderId}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-ibm-client-id</stringProp>
+                <stringProp name="Header.value">${P_X-Ibm-Client-Id}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${AccessToken}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Post_OrderReservationCallToOMS Response is not found</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">1</intProp>
+            <stringProp name="Assertion.scope">all</stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete_Cancellation" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+   &quot;order&quot;:{&#xd;
+      &quot;enterprise_code&quot;:&quot;${P_EnterpriseCode}&quot;,&#xd;
+      &quot;document_type&quot;:&quot;0001&quot;,&#xd;
+      &quot;cancel_request_id&quot;:&quot;Req_1202330001_SLXQBX&quot;,&#xd;
+      &quot;modification_reason_text&quot;:&quot;CustomerRequest&quot;,&#xd;
+      &quot;order_lines&quot;:[&#xd;
+         {&#xd;
+            &quot;item_id&quot;:&quot;${P_Item_Id2}&quot;,&#xd;
+            &quot;item_line_id&quot;:${P_Item_Line_Id},&#xd;
+            &quot;ordered_quantity&quot;:${P_OrderedQuantity},&#xd;
+            &quot;cancel_quantity&quot;:${P_CancelQuantity}&#xd;
+         }&#xd;
+      ],&#xd;
+      &quot;id&quot;:&quot;${P_OrderId}&quot;&#xd;
+   }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${P_Environment}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/landmarkgroup/retail-pt/v2/customer-orders/${P_OrderId}</stringProp>
+          <stringProp name="HTTPSampler.method">DELETE</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">x-ibm-client-id</stringProp>
+                <stringProp name="Header.value">${P_X-Ibm-Client-Id}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${AccessToken}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Delete_Cancellation Response is not found</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">1</intProp>
+            <stringProp name="Assertion.scope">all</stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
